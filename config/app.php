@@ -231,4 +231,6 @@ return [
 
     ],
 
+    'sms_message_templates' => resource_path('views/sms/')
+
 ];

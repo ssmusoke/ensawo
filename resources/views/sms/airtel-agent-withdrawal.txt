@@ -1,0 +1,1 @@
+{%transaction_type%} of UGX{%amount%} with Agent ID: {%agent_id%}.ChargeUGX{%fee%}. Bal UGX {%balance%}.TID: {%txn_id%}. Date {%txn_date%}.Tax UGX {%tax%}.

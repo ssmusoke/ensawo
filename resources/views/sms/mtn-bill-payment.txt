@@ -1,0 +1,1 @@
+You have {%transaction_type%} UGX {%amount%} for {%vendor_name%} at a Fee of UGX {%fee%}. AccountNo.: {%payer_account_number%}. New balance is UGX {%balance%}. Transaction ID: {%txn_id%}.

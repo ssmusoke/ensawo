@@ -1,0 +1,1 @@
+You have {%transaction_type%} UGX {%amount%} from {%vendor_name%} on {%txn_date%}. New balance: UGX {%balance%}. ID: {%txn_id%}.

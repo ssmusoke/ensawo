@@ -1,0 +1,1 @@
+You have sent UGX {%amount%} to {%vendor_name%} . Date  {%txn_date%}, Your Balance is UGX {%amount%}. Txn Id: {%txn_id%}.

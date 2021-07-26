@@ -1,0 +1,1 @@
+You have {%transaction_type%} UGX {%amount%} to {%recipient_name%}, {%recipient_number%} on {%txn_date%}, fee: {%fee%}. Reason: {%reason%}. New balance: {%balance%}. ID :{%txn_id%}.
