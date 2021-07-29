@@ -1,1 +1,1 @@
-You have {%transaction_type%} UGX {%amount%} from {%sender_name%}, {%sender_number%} on {%txn_date%}. Reason: {%reason%}}. New balance: UGX {%balance%}. ID: {%txn_id%}
+You have {%transaction_type%} UGX {%amount%} from {%sender_name%}, {%sender_number%} on {%txn_date%}. Reason: {%reason%}. New balance: UGX {%balance%}. ID: {%txn_id%}.

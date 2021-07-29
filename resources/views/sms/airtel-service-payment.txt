@@ -1,1 +1,1 @@
-{%transaction_type} UGX {%account%} to {%vendor_name%}  Mobile App Charge UGX {%fee%}, Trans ID {%txn_id%}. Bal UGX {%balance%} Date: {%txn_date}.
+{%transaction_type} UGX {%amount%} to {%vendor_name%}  Mobile App Charge UGX {%fee%}, Trans ID {%txn_id%}. Bal UGX {%balance%} Date: {%txn_date}.

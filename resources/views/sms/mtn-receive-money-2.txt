@@ -1,1 +1,1 @@
-You have {%transaction_type%} {%amount%} UGX from {%sender_name} . ({%sender_number%}) on your mobile money account at {%txn_date%}. Message from sender: {%reason%}. Your new balance:{%balance%} UGX. Financial Transaction Id: {%txn_id%}.
+You have {%transaction_type%} {%amount%} UGX from {%sender_name%} ({%sender_number%}) on your mobile money account at {%txn_date%}. Message from sender: {%reason%}. Your new balance:{%balance%} UGX. Financial Transaction Id: {%txn_id%}.

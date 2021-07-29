@@ -1,1 +1,1 @@
-You have received UGX {%amount%} from {%sender_number%}, {%sender_name%}. Your Balance is UGX {%balance%}. Trans ID: {%txn_id%}.
+You have {%transaction_type%} UGX {%amount%} from {%sender_number%}, {%sender_name%}. Your Balance is UGX {%balance%}. Trans ID: {%txn_id%}.
