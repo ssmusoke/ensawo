@@ -1,8 +1,8 @@
 {
-    "name": "laravel/laravel",
+    "name": "ensawo/ensawo",
     "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "description": "Ensawo - Tracking important Financial Transactions",
+    "keywords": ["financial services", "mobile money", "wallet"],
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
@@ -19,6 +19,7 @@
         "spatie/ray": "^1.28"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.6",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
         "laravel/sail": "^1.0.1",
