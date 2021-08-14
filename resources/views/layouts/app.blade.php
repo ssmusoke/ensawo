@@ -32,7 +32,7 @@
                     </div>
                 </header>
             @endif
-
+                <x-show-breakpoints />
             <!-- Page Content -->
             <main>
                 {{ $slot }}

@@ -174,3 +174,5 @@ storage/*.key
 # Laravel 5 & Lumen specific with changed public path
 
 
+/draft.yaml
+/.blueprint

@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Ensawo'),
 
     /*
     |--------------------------------------------------------------------------
@@ -232,7 +232,5 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
     ],
-
-    'sms_message_templates' => resource_path('views/sms/')
 
 ];

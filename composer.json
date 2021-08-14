@@ -5,8 +5,9 @@
     "keywords": ["financial services", "mobile money", "wallet"],
     "license": "MIT",
     "require": {
-        "php": "^7.3|^8.0",
+        "php": "^8.0",
         "aymanrb/php-unstructured-text-parser": "^2.1",
+        "blade-ui-kit/blade-heroicons": "^1.2",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
@@ -15,6 +16,8 @@
         "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.5",
         "livewire/livewire": "^2.5",
+        "moneyphp/money": "^4.0",
+        "ryangjchandler/laravel-uuid": "^0.3.0",
         "spatie/laravel-mailable-test": "^2.2",
         "spatie/ray": "^1.28"
     },
@@ -22,11 +25,13 @@
         "barryvdh/laravel-debugbar": "^3.6",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
+        "laravel-shift/blueprint": "^1.24",
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.2",
         "nunomaduro/collision": "^5.0",
         "pestphp/pest-plugin-laravel": "^1.1",
         "phpunit/phpunit": "^9.3.3",
+        "ryangjchandler/laravel-expose": "^0.1.0",
         "spatie/pest-plugin-snapshots": "^1.1"
     },
     "autoload": {
@@ -63,6 +68,12 @@
             "dont-discover": []
         }
     },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../php-unstructured-text-parser"
+        }
+    ],
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",

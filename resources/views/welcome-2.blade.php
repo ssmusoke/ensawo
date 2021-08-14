@@ -3,12 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Ensawo</title>
 
     <!-- Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
@@ -18,9 +17,9 @@
 <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
-<body class="font-sans antialiased">
-<x-show-breakpoints/>
-<div class="font-sans text-gray-900 antialiased">
+<body class="antialiased">
+
+<div class="flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
     @if (Route::has('login'))
         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
             @auth
@@ -34,8 +33,22 @@
             @endauth
         </div>
     @endif
-    {{ $slot }}
-</div>
+
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <x-show-breakpoints />
+        <div class="rounded-lg divide-y divide-gray-200">
+            <div class="px-4 py-5 content-center sm:px-6">
+                <img src="{{ asset('img/ensawo-logo.png') }}" alt="Ensawo" class="h-16 sm:h-8"/>
+            </div>
+            <div class="px-4 py-5 sm:p-6">
+                <livewire:transaction-component />
+            </div>
+            <div class="px-4 py-4 sm:px-6">
+                <!-- Content goes here -->
+                <!-- We use less vertical padding on card footers at all sizes than on headers or body sections -->
+            </div>
+        </div>
+    </div>
 @livewireScripts
 </body>
 </html>
