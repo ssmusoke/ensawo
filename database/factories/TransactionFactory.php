@@ -2,12 +2,13 @@
 
 namespace Database\Factories;
 
+use App\Models\Network;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
-use App\Models\Models\User;
 use App\Models\PhoneNumber;
 use App\Models\Transaction;
 use App\Models\TransactionType;
+use Illuminate\Support\Arr;
 
 class TransactionFactory extends Factory
 {
@@ -26,15 +27,16 @@ class TransactionFactory extends Factory
     public function definition()
     {
         return [
-            'amount' => $this->faker->numberBetween(-10000, 10000),
+            'message' => $this->faker->paragraph(),
+            'amount' => $this->faker->numberBetween(1000, 10000),
             'agent_id' => $this->faker->word,
             'agent_name' => $this->faker->word,
             'agent_number' => $this->faker->word,
-            'balance' => $this->faker->randomFloat(0, 0, 9999999999.),
+            'balance' => $this->faker->numberBetween(500, 7000000),
             'txn_id' => $this->faker->word,
             'txn_date' => $this->faker->dateTime(),
-            'fee' => $this->faker->randomFloat(0, 0, 9999999999.),
-            'tax' => $this->faker->randomFloat(0, 0, 9999999999.),
+            'fee' => $this->faker->numberBetween(0, 62000),
+            'tax' => $this->faker->numberBetween(0, 35000),
             'vendor_name' => $this->faker->word,
             'sender_number' => $this->faker->word,
             'sender_name' => $this->faker->word,
@@ -44,9 +46,8 @@ class TransactionFactory extends Factory
             'payer_account_number' => $this->faker->word,
             'reason' => $this->faker->word,
             'uuid' => $this->faker->uuid,
-            'created_by' => User::factory()->create()->created_by,
-            'phone_number_id' => PhoneNumber::factory(),
-            'transaction_type_id' => TransactionType::factory(),
+            'transaction_type_id' => Arr::random(array_keys(config('ensawo.sms_template_to_transaction_type_mapping'))),
+            'network_id' => Arr::random(["mtn", "airtel"])
         ];
     }
 }

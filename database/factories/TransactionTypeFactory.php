@@ -25,6 +25,7 @@ class TransactionTypeFactory extends Factory
         return [
             'name' => $this->faker->name,
             'description' => $this->faker->text,
+            'code' => $this->faker->word
         ];
     }
 }

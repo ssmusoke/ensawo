@@ -25,7 +25,7 @@ class NetworkFactory extends Factory
         return [
             'code' => $this->faker->word,
             'name' => $this->faker->name,
-            'logo' => $this->faker->word,
+            'logo' => $this->faker->imageUrl,
         ];
     }
 }

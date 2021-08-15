@@ -2,10 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 use App\Models\Network;
-use App\Models\Owner;
 use App\Models\PhoneNumber;
 
 class PhoneNumberFactory extends Factory
@@ -28,7 +27,7 @@ class PhoneNumberFactory extends Factory
             'number' => $this->faker->regexify('[A-Za-z0-9]{20}'),
             'nickname' => $this->faker->word,
             'uuid' => $this->faker->uuid,
-            'owner_id' => Owner::factory(),
+            'owner_id' => User::factory(),
             'network_id' => Network::factory(),
         ];
     }
