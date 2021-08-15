@@ -33,5 +33,13 @@ return [
         "airtel-receive-money.txt" => 'RECEIVE',
         "mtn-agent-withdrawal.txt" => 'AGENT_WITHDRAW',
         "mtn-send-money-2.txt" => 'SEND'
-    ]
+    ],
+    /*
+    |--------------------------------------------------------------------------
+    | Name of the cookie used to store a transaction executed without registration
+    |--------------------------------------------------------------------------
+    |
+    |
+    */
+    'transaction_cookie_name' => 'transaction_uuid'
 ];

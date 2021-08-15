@@ -1,6 +1,6 @@
 <div class="">
     <div class="py-4">
-        Paste your Mobile Money SMS message below
+        <label for="message">Paste your Mobile Money SMS message below</label>
         <textarea id="message" name="message" rows="5"
                   class="mb-4 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
                   wire:model="message"
@@ -15,19 +15,22 @@
         </div>
         <div class="flex justify-between">
             <button id="analyze" name="analyze" type="button"
-                    class="inline-flex items-center px-6 py-4 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-base no-underline font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                     wire:click="processMessage">
 
                 Process Message
                 <x-heroicon-o-lightning-bolt class="ml-3 -mr-1 h-5 w-5"/>
             </button>
-            @isset($transaction)
-                <button type="button"
-                        class="inline-flex items-center ml-6 px-6 py-4 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-green-500 hover:bg-green-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-300">
-                    Save Message
-                    <x-heroicon-o-save class="ml-3 -mr-1 h-5 w-5"/>
-                </button>
-            @endisset
+            <!-- hide the save button for logged in users since the transactions are automatically linked -->
+            @guest
+                @isset($transaction)
+                    <a href="{{ route("link-transaction-to-user", ["uuid" => $transaction->uuid ]) }}"
+                       class="no-underline inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-green-500 hover:bg-green-300 hover:no-underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-300 focus:no-underline">
+                        Save Message
+                        <x-heroicon-o-save class="ml-3 -mr-1 h-5 w-5 text-white"/>
+                    </a>
+                @endisset
+            @endguest
         </div>
     </div>
     <x-loading-indicator/>
@@ -65,7 +68,7 @@
                             Amount
                         </dt>
                         <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                            {{ $transaction->amount }}
+                            {{ $transaction->amount_display }}
                         </dd>
                     </div>
                     @isset($transaction->agent_id)
@@ -104,7 +107,7 @@
                                 Balance
                             </dt>
                             <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                {{ $transaction->balance }}
+                                {{ $transaction->balance_display }}
                             </dd>
                         </div>
                     @endisset
@@ -135,7 +138,7 @@
                             </dt>
                             <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
 
-                                {{ $transaction->fee }}
+                                {{ $transaction->fee_display }}
                             </dd>
                         </div>
                     @endisset
@@ -145,7 +148,7 @@
                                 Tax
                             </dt>
                             <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                {{ $transaction->tax }}
+                                {{ $transaction->tax_display }}
                             </dd>
                         </div>
                     @endisset
