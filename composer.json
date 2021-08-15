@@ -6,8 +6,9 @@
     "license": "MIT",
     "require": {
         "php": "^8.0",
-        "aymanrb/php-unstructured-text-parser": "^2.1",
+        "aymanrb/php-unstructured-text-parser": "dev-master",
         "blade-ui-kit/blade-heroicons": "^1.2",
+        "cknow/laravel-money": "^6.1",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
@@ -16,7 +17,6 @@
         "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.5",
         "livewire/livewire": "^2.5",
-        "moneyphp/money": "^4.0",
         "ryangjchandler/laravel-uuid": "^0.3.0",
         "spatie/laravel-mailable-test": "^2.2",
         "spatie/ray": "^1.28"
@@ -68,12 +68,6 @@
             "dont-discover": []
         }
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../php-unstructured-text-parser"
-        }
-    ],
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
