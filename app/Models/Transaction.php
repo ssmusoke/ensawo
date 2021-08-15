@@ -2,9 +2,10 @@
 
 namespace App\Models;
 
+use Cknow\Money\Money;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Money\Money;
+use Illuminate\Support\Str;
 use RyanChandler\Uuid\Concerns\HasUuid;
 
 class Transaction extends Model
@@ -89,18 +90,61 @@ class Transaction extends Model
     }
 
     public function setAmountAttribute($value) {
-        $this->attributes['amount'] = Money::UGX($value)->getAmount();
+        $this->attributes['amount'] = Str::remove(",", $value);
+    }
+
+    public function getAmountDisplayAttribute() {
+        return Money::UGX($this->attributes['amount'])->format();
     }
 
     public function setTaxAttribute($value) {
-        $this->attributes['tax'] = Money::UGX($value)->getAmount();
+        $this->attributes['tax'] = Str::remove(",", $value);
+    }
+
+    public function getTaxDisplayAttribute() {
+        return Money::UGX($this->attributes['tax'])->format();
     }
 
     public function setFeeAttribute($value) {
-        $this->attributes['fee'] = Money::UGX($value)->getAmount();
+        $this->attributes['fee'] = Str::remove(",", $value);
+    }
+
+    public function getFeeDisplayAttribute() {
+        return Money::UGX($this->attributes['fee'])->format();
     }
 
     public function setBalanceAttribute($value) {
-        $this->attributes['balance'] = Money::UGX($value)->getAmount();
+        $this->attributes['balance'] = Str::remove(",", $value);
+    }
+
+    public function getBalanceDisplayAttribute() {
+        return Money::UGX($this->attributes['balance'])->format();
+    }
+
+    public function getAgentIdDisplayAttribute() {
+        return empty($this->agent_id) ? "" : "Agent ID: ".$this->agent_id;
+    }
+
+    public function getSenderAttribute() {
+        $senders = [
+            $this->sender_name,
+            $this->agent_name,
+            $this->agent_number,
+            $this->agent_id_display
+
+
+        ];
+        return implode(",", array_filter($senders));
+    }
+
+    public function getReceiverAttribute() {
+        $receivers = [
+            $this->agent_name,
+            $this->agent_number,
+            $this->vendor_name,
+            $this->recipient_name
+        ];
+
+        return implode(",", array_filter($receivers));
     }
 }
