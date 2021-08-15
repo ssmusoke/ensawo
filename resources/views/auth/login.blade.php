@@ -2,6 +2,17 @@
     <x-jet-authentication-card>
         <x-slot name="logo">
             <x-jet-authentication-card-logo />
+            <div class="sm:mx-auto sm:w-full sm:max-w-md">
+                <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
+                    Sign in to your account
+                </h2>
+                <p class="mt-2 text-center text-sm text-gray-600">
+                    Or
+                    <a href="{{ route('register') }}" class="font-medium text-indigo-600 hover:text-indigo-500">
+                        register for an account
+                    </a>
+                </p>
+            </div>
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
@@ -34,7 +45,7 @@
 
             <div class="flex items-center justify-end mt-4">
                 @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
+                    <a class="underline text-sm text-indigo-600 hover:text-indigo-900" href="{{ route('password.request') }}">
                         {{ __('Forgot your password?') }}
                     </a>
                 @endif
