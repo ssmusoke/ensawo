@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LinkTransactionToUser;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,13 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::view("/", 'welcome')->name('welcome');
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+    Route::view("dashboard", 'dashboard')->name('dashboard');
+    Route::get("link-transaction-to-user/{uuid}", LinkTransactionToUser::class)->name("link-transaction-to-user");
 });
-Route::get('/2', function () {
-    return view('welcome-2');
-});
-
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
