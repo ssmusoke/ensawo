@@ -1,7 +1,7 @@
 <div class="flex items-center justify-center">
     <button type="button"
             class="inline-flex flex-no-wrap items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-500 hover:bg-indigo-500 transition ease-in-out duration-150 cursor-not-allowed m-4"
-            wire:loading.flex>
+            wire:loading.flex @isset($target) wire:target="{{ $target }}"@endisset>
         <svg class="animate-spin -ml-1 mr-3 h-16 w-16 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
              viewBox="0 0 24 24">
             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>

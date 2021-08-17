@@ -3,7 +3,7 @@
         <label for="message">Paste your Mobile Money SMS message below</label>
         <textarea id="message" name="message" rows="5"
                   class="mb-4 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
-                  wire:model="message"
+                  wire:model.defer="message"
                   placeholder="Paste your Mobile Money SMS message here"></textarea>
         <div>
             @error('message')
@@ -66,7 +66,7 @@
             @endguest
         </div>
     </div>
-    <x-loading-indicator/>
+    <x-loading-indicator target="processMessage"/>
     <!-- Display the transaction details -->
     @isset($transaction)
         <div class="bg-white shadow overflow-hidden sm:rounded-lg" wire:loading.remove>
