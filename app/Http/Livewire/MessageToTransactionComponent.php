@@ -37,9 +37,9 @@ class MessageToTransactionComponent extends Component
         $this->validate();
         $processor = new ProcessTransactionMessageAction();
         $results = $processor->execute($this->message);
-        // check if the results are well formed otherwise throw an error
+        // check if the results are well-formed otherwise throw an error
         if (!$results) {
-            $this->addError('message', 'The message could not be processed, confirm that it is a mobile money transaction message');
+            $this->addError('unknown_message_format', 'The message could not be processed because the format is unknown');
         } else {
             if (Auth::check()) {
                 // The user is logged in...
@@ -47,8 +47,6 @@ class MessageToTransactionComponent extends Component
                 $results = Arr::add($results, 'created_by', Auth::user()->id);
             }
             $this->transaction = Transaction::create($results);
-            // set a cookie to store the transaction uuid
-            cookie('transaction-uuid', $this->transaction->uuid, 30);
         }
     }
 }

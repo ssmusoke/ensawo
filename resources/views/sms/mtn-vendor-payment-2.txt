@@ -1,0 +1,1 @@
+Y'ello. You have paid UGX {%amount%} for {%vendor_name%}. Account No.: {%payer_account_number%}. Transaction ID: {%txn_id%}. Your Mobile Money Account balance is now UGX {%balance%}.

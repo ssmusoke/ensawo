@@ -32,7 +32,9 @@ return [
         "mtn-receive-money.txt" => 'RECEIVE',
         "airtel-receive-money.txt" => 'RECEIVE',
         "mtn-agent-withdrawal.txt" => 'AGENT_WITHDRAW',
-        "mtn-send-money-2.txt" => 'SEND'
+        "mtn-send-money-2.txt" => 'SEND',
+        "mtn-vendor-payment.txt" => 'SERVICE_PAYMENT',
+        "mtn-vendor-payment-2.txt" => 'SERVICE_PAYMENT',
     ],
     /*
     |--------------------------------------------------------------------------

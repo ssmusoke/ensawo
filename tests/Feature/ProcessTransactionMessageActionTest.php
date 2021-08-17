@@ -29,7 +29,7 @@ it('can process mobile money messages', function ($message, $results) {
     $transaction = Transaction::create($transactionData);
     // now compare the values from the database to those in expected results
     // some transformation has happened so this cannot be array to array comparison
-    expect($transaction->amount)->toEqual(money_parse(Str::remove(",", $results['amount']), "UGX")->format());
+    expect($transaction->amount_display)->toEqual(money_parse(Str::remove(",", $results['amount']), "UGX")->format());
 })->with('mobile-money-transaction-messages');
 
 it('can link a transaction to user', function () {

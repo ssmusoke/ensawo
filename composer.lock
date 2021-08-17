@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4cb29589d78b0c752e8cb5b87993ce99",
+    "content-hash": "36f0e256b32d08dfd3902ebd4f8b4cb8",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -64,16 +64,16 @@
         },
         {
             "name": "aymanrb/php-unstructured-text-parser",
-            "version": "dev-master",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aymanrb/php-unstructured-text-parser.git",
-                "reference": "d6b9c7f01c47d44ab027b13de64a7a16ebd70dd9"
+                "reference": "6229f3bcfb97c95aa06baaeca05ba5074abc8382"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aymanrb/php-unstructured-text-parser/zipball/d6b9c7f01c47d44ab027b13de64a7a16ebd70dd9",
-                "reference": "d6b9c7f01c47d44ab027b13de64a7a16ebd70dd9",
+                "url": "https://api.github.com/repos/aymanrb/php-unstructured-text-parser/zipball/6229f3bcfb97c95aa06baaeca05ba5074abc8382",
+                "reference": "6229f3bcfb97c95aa06baaeca05ba5074abc8382",
                 "shasum": ""
             },
             "require": {
@@ -85,7 +85,6 @@
                 "php-coveralls/php-coveralls": "^2.1",
                 "phpunit/phpunit": "^8.4"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -124,7 +123,7 @@
                 "issues": "https://github.com/aymanrb/php-unstructured-text-parser/issues",
                 "source": "https://github.com/aymanrb/php-unstructured-text-parser"
             },
-            "time": "2021-08-15T12:52:06+00:00"
+            "time": "2021-08-15T16:05:34+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -400,16 +399,16 @@
         },
         {
             "name": "brick/math",
-            "version": "0.9.2",
+            "version": "0.9.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brick/math.git",
-                "reference": "dff976c2f3487d42c1db75a3b180e2b9f0e72ce0"
+                "reference": "ca57d18f028f84f777b2168cd1911b0dee2343ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brick/math/zipball/dff976c2f3487d42c1db75a3b180e2b9f0e72ce0",
-                "reference": "dff976c2f3487d42c1db75a3b180e2b9f0e72ce0",
+                "url": "https://api.github.com/repos/brick/math/zipball/ca57d18f028f84f777b2168cd1911b0dee2343ae",
+                "reference": "ca57d18f028f84f777b2168cd1911b0dee2343ae",
                 "shasum": ""
             },
             "require": {
@@ -419,7 +418,7 @@
             "require-dev": {
                 "php-coveralls/php-coveralls": "^2.2",
                 "phpunit/phpunit": "^7.5.15 || ^8.5 || ^9.0",
-                "vimeo/psalm": "4.3.2"
+                "vimeo/psalm": "4.9.2"
             },
             "type": "library",
             "autoload": {
@@ -444,15 +443,19 @@
             ],
             "support": {
                 "issues": "https://github.com/brick/math/issues",
-                "source": "https://github.com/brick/math/tree/0.9.2"
+                "source": "https://github.com/brick/math/tree/0.9.3"
             },
             "funding": [
+                {
+                    "url": "https://github.com/BenMorel",
+                    "type": "github"
+                },
                 {
                     "url": "https://tidelift.com/funding/github/packagist/brick/math",
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-20T22:51:39+00:00"
+            "time": "2021-08-15T20:50:18+00:00"
         },
         {
             "name": "cknow/laravel-money",
@@ -10960,9 +10963,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "aymanrb/php-unstructured-text-parser": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

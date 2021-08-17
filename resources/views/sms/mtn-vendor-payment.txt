@@ -1,0 +1,1 @@
+Y'ello. {%vendor_name%} has deducted UGX {%amount%} from your mobile money account. Message: {%reason%}. New balance is:UGX {%balance%}. Your Bonus was: 0. Be safe. Do NOT share your Mobile Money PIN.

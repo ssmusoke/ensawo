@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\LinkTransactionToUser;
 use Illuminate\Support\Facades\Route;
 
@@ -15,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view("/", 'welcome')->name('welcome');
+Route::view('contact-us', 'contact-us')->name('contact-us');
+Route::post('contact-us-action', ContactUsController::class)->name('contact-us-action');
+
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::view("dashboard", 'dashboard')->name('dashboard');
     Route::get("link-transaction-to-user/{uuid}", LinkTransactionToUser::class)->name("link-transaction-to-user");
