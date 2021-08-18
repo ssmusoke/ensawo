@@ -1,4 +1,5 @@
-<div class="rounded-md bg-green-50 p-4">
+@if (session('status'))
+    <div class="rounded-md bg-green-50 p-4">
     <div class="flex">
         <div class="flex-shrink-0">
             <!-- Heroicon name: solid/check-circle -->
@@ -11,8 +12,9 @@
         </div>
         <div class="ml-3">
             <h3 class="text-sm font-medium text-green-800">
-                {{ $status }}
+                {{ session('status') }}
             </h3>
         </div>
     </div>
 </div>
+    @endif
