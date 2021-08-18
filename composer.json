@@ -20,6 +20,7 @@
         "livewire/livewire": "^2.5",
         "owenvoke/blade-fontawesome": "^1.9",
         "ryangjchandler/laravel-uuid": "^0.3.0",
+        "spatie/laravel-backup": "^7.6",
         "spatie/laravel-mailable-test": "^2.2",
         "spatie/ray": "^1.28"
     },
