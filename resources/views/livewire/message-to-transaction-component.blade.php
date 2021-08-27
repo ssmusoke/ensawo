@@ -1,10 +1,9 @@
-<div class="">
-    <div class="py-4">
-        <label for="message">Paste your Mobile Money SMS message below</label>
+<div class="w-full w-auto mb-4">
+    <div class="py-4 text-xl">
+        <label for="message">Paste your transaction SMS message in the field below </label>
         <textarea id="message" name="message" rows="5"
-                  class="mb-4 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
-                  wire:model.defer="message"
-                  placeholder="Paste your Mobile Money SMS message here"></textarea>
+                  class="my-4 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-xl block w-full sm:text border border-gray-300 rounded-xl"
+                  wire:model.defer="message"></textarea>
         <div>
             @error('message')
             <div class="rounded-md bg-red-50 p-4">
@@ -31,16 +30,17 @@
                     <div class="flex-shrink-0">
                         <x-heroicon-s-x-circle class="h-5 w-5 text-red-400"/>
                     </div>
-                    <div class="ml-3 flex-1 md:flex md:justify-between">
-                        <p class="text-sm text-red-800 whitespace-nowrap">
-                            {{ $errors->first('unknown_message_format') }}
-                        </p>
-                        <p class="mt-3 text-sm md:mt-0 md:ml-6">
-                            <a href="{{ route('contact-us') }}"
-                               class="whitespace-nowrap font-medium text-blue-700 hover:text-blue-600">Share
-                                message
-                                <span aria-hidden="true">&rarr;</span></a>
-                        </p>
+                    <div class="ml-3">
+                        <div class="text-sm text-green-700">
+                            <p class="text-sm text-red-800">
+                                {{ $errors->first('unknown_message_format') }}
+                            </p>
+                        </div>
+                            <div class="mx-2 my-2 flex flex-row-reverse">
+                                <a href="{{ route('contact-us') }}" class="ml-3 bg-red-300 px-2 py-1.5 rounded-md text-sm font-medium text-red-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-red-50 focus:ring-red-600">
+                                    Submit message for review
+                                </a>
+                        </div>
                     </div>
                 </div>
             </div>

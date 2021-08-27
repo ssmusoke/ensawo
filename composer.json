@@ -13,12 +13,14 @@
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
+        "kingflamez/laravelrave": "^4.2",
         "laravel/framework": "^8.40",
         "laravel/jetstream": "^2.3",
         "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.5",
         "livewire/livewire": "^2.5",
         "owenvoke/blade-fontawesome": "^1.9",
+        "rinvex/laravel-subscriptions": "^5.0",
         "ryangjchandler/laravel-uuid": "^0.3.0",
         "spatie/laravel-backup": "^7.6",
         "spatie/laravel-mailable-test": "^2.2",
@@ -33,6 +35,7 @@
         "mockery/mockery": "^1.4.2",
         "nunomaduro/collision": "^5.0",
         "pestphp/pest-plugin-laravel": "^1.1",
+        "pestphp/pest-plugin-parallel": "^0.2.0",
         "phpunit/phpunit": "^9.3.3",
         "ryangjchandler/laravel-expose": "^0.1.0",
         "spatie/pest-plugin-snapshots": "^1.1"
@@ -61,9 +64,7 @@
             "@php artisan key:generate --ansi"
         ],
         "post-install-cmd": [
-            "@php artisan cache:clear",
-            "@php artisan config:clear",
-            "@php artisan route:clear"
+            "@php artisan optimize"
         ]
     },
     "extra": {

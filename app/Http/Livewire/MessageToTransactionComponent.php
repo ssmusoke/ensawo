@@ -34,6 +34,9 @@ class MessageToTransactionComponent extends Component
     ];
 
     public function processMessage() {
+        // set the transaction to null so that other checks can be empty
+        $this->transaction = null;
+
         $this->validate();
         $processor = new ProcessTransactionMessageAction();
         $results = $processor->execute($this->message);

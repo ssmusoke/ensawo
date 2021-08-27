@@ -43,5 +43,13 @@ return [
     |
     |
     */
-    'transaction_cookie_name' => 'transaction_uuid'
+    'transaction_cookie_name' => 'transaction_uuid',
+    /*
+   |--------------------------------------------------------------------------
+   | Number of transactions in the free plan
+   |--------------------------------------------------------------------------
+   |
+   |
+   */
+    'free_transactions_count' => env('FREE_TRANSACTIONS', '25'),
 ];
