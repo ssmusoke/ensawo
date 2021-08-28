@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "37882db504f99f48c8102b90204d87e9",
+    "content-hash": "06228ae071fffeb9ce302b50185f5dab",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1836,16 +1836,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v8.56.0",
+            "version": "v8.57.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "d700f336dc672dcbfe46db05d4e5fe9347b3a5b6"
+                "reference": "6de01746680d7bc7e239b20ec5cdfe70ce586235"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/d700f336dc672dcbfe46db05d4e5fe9347b3a5b6",
-                "reference": "d700f336dc672dcbfe46db05d4e5fe9347b3a5b6",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/6de01746680d7bc7e239b20ec5cdfe70ce586235",
+                "reference": "6de01746680d7bc7e239b20ec5cdfe70ce586235",
                 "shasum": ""
             },
             "require": {
@@ -2000,7 +2000,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-08-24T13:46:30+00:00"
+            "time": "2021-08-27T13:34:11+00:00"
         },
         {
             "name": "laravel/jetstream",
@@ -3542,6 +3542,85 @@
             "time": "2020-04-05T10:47:18+00:00"
         },
         {
+            "name": "protonemedia/laravel-form-components",
+            "version": "2.5.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/protonemedia/laravel-form-components.git",
+                "reference": "c0eb477bddd3b8cdad1a3d3b2995fdcb03237e52"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/protonemedia/laravel-form-components/zipball/c0eb477bddd3b8cdad1a3d3b2995fdcb03237e52",
+                "reference": "c0eb477bddd3b8cdad1a3d3b2995fdcb03237e52",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^7.22.4 || ^8.0",
+                "php": "^7.4 || ^8.0",
+                "symfony/http-foundation": "^5.1.2"
+            },
+            "require-dev": {
+                "livewire/livewire": "^2.0",
+                "mockery/mockery": "^1.3.3",
+                "orchestra/testbench-browser-kit": "^5.1 || ^6.0",
+                "phpunit/phpunit": "^8.5 || ^9.0",
+                "spatie/laravel-translatable": "^4.4",
+                "symfony/dom-crawler": "^5.1.14"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "ProtoneMedia\\LaravelFormComponents\\Support\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ProtoneMedia\\LaravelFormComponents\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pascal Baljet",
+                    "email": "pascal@protone.media",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Blade components to rapidly build forms with Tailwind CSS Custom Forms and Bootstrap 4.",
+            "homepage": "https://github.com/protonemedia/laravel-form-components",
+            "keywords": [
+                "Forms",
+                "bootstrap",
+                "bootstrap4",
+                "form",
+                "form-builder",
+                "form-components",
+                "laravel",
+                "laravel-form-builder",
+                "laravel-form-components",
+                "protonemedia",
+                "tailwind",
+                "tailwindcss"
+            ],
+            "support": {
+                "issues": "https://github.com/protonemedia/laravel-form-components/issues",
+                "source": "https://github.com/protonemedia/laravel-form-components/tree/2.5.4"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/pascalbaljet",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-02-15T15:52:42+00:00"
+        },
+        {
             "name": "psr/container",
             "version": "1.1.1",
             "source": {
@@ -4197,30 +4276,30 @@
         },
         {
             "name": "rinvex/laravel-subscriptions",
-            "version": "v5.0.3",
+            "version": "v6.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/laravel-subscriptions.git",
-                "reference": "38dad09764d6b4babf05e82c37a8ede385c7875d"
+                "reference": "66c72b50f6fa025a538174ee2967339abe33d048"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/laravel-subscriptions/zipball/38dad09764d6b4babf05e82c37a8ede385c7875d",
-                "reference": "38dad09764d6b4babf05e82c37a8ede385c7875d",
+                "url": "https://api.github.com/repos/rinvex/laravel-subscriptions/zipball/66c72b50f6fa025a538174ee2967339abe33d048",
+                "reference": "66c72b50f6fa025a538174ee2967339abe33d048",
                 "shasum": ""
             },
             "require": {
                 "illuminate/console": "^8.0.0 || ^9.0.0",
                 "illuminate/database": "^8.0.0 || ^9.0.0",
                 "illuminate/support": "^8.0.0 || ^9.0.0",
-                "php": "^7.4.0 || ^8.0.0",
-                "rinvex/laravel-support": "^5.0.0",
-                "spatie/eloquent-sortable": "^3.7.0",
-                "spatie/laravel-sluggable": "^2.2.0",
-                "spatie/laravel-translatable": "^4.2.0"
+                "php": "^8.0.0",
+                "rinvex/laravel-support": "^6.0.0",
+                "spatie/eloquent-sortable": "^4.0.0",
+                "spatie/laravel-sluggable": "^3.0.0",
+                "spatie/laravel-translatable": "^5.0.0"
             },
             "require-dev": {
-                "codedungeon/phpunit-result-printer": "^0.30.0",
+                "codedungeon/phpunit-result-printer": "^0.31.0",
                 "illuminate/container": "^8.0.0 || ^9.0.0",
                 "phpunit/phpunit": "^9.5.0"
             },
@@ -4275,20 +4354,20 @@
                 "issues": "https://github.com/rinvex/laravel-subscriptions/issues",
                 "source": "https://github.com/rinvex/laravel-subscriptions"
             },
-            "time": "2021-03-15T07:51:36+00:00"
+            "time": "2021-08-22T00:54:07+00:00"
         },
         {
             "name": "rinvex/laravel-support",
-            "version": "v5.0.19",
+            "version": "v6.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/laravel-support.git",
-                "reference": "1be3aef537da2e924f8a243e1b0538851e700f0d"
+                "reference": "d4d17deda2d6ef0ec69a64cc05ed16273e70f8b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/laravel-support/zipball/1be3aef537da2e924f8a243e1b0538851e700f0d",
-                "reference": "1be3aef537da2e924f8a243e1b0538851e700f0d",
+                "url": "https://api.github.com/repos/rinvex/laravel-support/zipball/d4d17deda2d6ef0ec69a64cc05ed16273e70f8b8",
+                "reference": "d4d17deda2d6ef0ec69a64cc05ed16273e70f8b8",
                 "shasum": ""
             },
             "require": {
@@ -4300,7 +4379,7 @@
                 "illuminate/routing": "^8.0.0 || ^9.0.0",
                 "illuminate/support": "^8.0.0 || ^9.0.0",
                 "illuminate/validation": "^8.0.0 || ^9.0.0",
-                "php": "^7.4.0 || ^8.0.0",
+                "php": "^8.0.0",
                 "rinvex/tmp-watson-validating": "^6.0.0",
                 "spatie/laravel-schemaless-attributes": "^2.0.0"
             },
@@ -4364,7 +4443,7 @@
                 "issues": "https://github.com/rinvex/laravel-support/issues",
                 "source": "https://github.com/rinvex/laravel-support"
             },
-            "time": "2021-08-06T09:50:21+00:00"
+            "time": "2021-08-22T00:54:25+00:00"
         },
         {
             "name": "rinvex/tmp-watson-validating",
@@ -4617,25 +4696,26 @@
         },
         {
             "name": "spatie/eloquent-sortable",
-            "version": "3.11.0",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/eloquent-sortable.git",
-                "reference": "b06fa886559f8d40e31c8a69fd32bd45401dc5da"
+                "reference": "6b4ca608144153a69b6a9f457e15bd7eafbe97a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/eloquent-sortable/zipball/b06fa886559f8d40e31c8a69fd32bd45401dc5da",
-                "reference": "b06fa886559f8d40e31c8a69fd32bd45401dc5da",
+                "url": "https://api.github.com/repos/spatie/eloquent-sortable/zipball/6b4ca608144153a69b6a9f457e15bd7eafbe97a9",
+                "reference": "6b4ca608144153a69b6a9f457e15bd7eafbe97a9",
                 "shasum": ""
             },
             "require": {
-                "illuminate/database": "^6.0|^7.0|^8.0",
-                "illuminate/support": "^6.0|^7.0|^8.0",
-                "php": "^7.3|^8.0"
+                "illuminate/database": "^7.0|^8.0",
+                "illuminate/support": "^7.0|^8.0",
+                "php": "^8.0",
+                "spatie/laravel-package-tools": "^1.6"
             },
             "require-dev": {
-                "orchestra/testbench": "^4.0|^5.0|^6.0",
+                "orchestra/testbench": "^5.0|^6.0",
                 "phpunit/phpunit": "^8.0|^9.0"
             },
             "type": "library",
@@ -4673,15 +4753,19 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/eloquent-sortable/issues",
-                "source": "https://github.com/spatie/eloquent-sortable/tree/3.11.0"
+                "source": "https://github.com/spatie/eloquent-sortable/tree/4.0.0"
             },
             "funding": [
+                {
+                    "url": "https://spatie.be/open-source/support-us",
+                    "type": "custom"
+                },
                 {
                     "url": "https://github.com/spatie",
                     "type": "github"
                 }
             ],
-            "time": "2021-01-18T00:32:12+00:00"
+            "time": "2021-03-31T14:07:53+00:00"
         },
         {
             "name": "spatie/laravel-backup",
@@ -5055,22 +5139,22 @@
         },
         {
             "name": "spatie/laravel-sluggable",
-            "version": "2.6.2",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-sluggable.git",
-                "reference": "297097239a675747d74fbd1ecb3ae0d4724a17de"
+                "reference": "03dd6b573efb66f2eb96892b3646a6a8b7722adf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-sluggable/zipball/297097239a675747d74fbd1ecb3ae0d4724a17de",
-                "reference": "297097239a675747d74fbd1ecb3ae0d4724a17de",
+                "url": "https://api.github.com/repos/spatie/laravel-sluggable/zipball/03dd6b573efb66f2eb96892b3646a6a8b7722adf",
+                "reference": "03dd6b573efb66f2eb96892b3646a6a8b7722adf",
                 "shasum": ""
             },
             "require": {
                 "illuminate/database": "^7.30|^8.0",
                 "illuminate/support": "^7.30|^8.0",
-                "php": "^7.4|^8.0"
+                "php": "^8.0"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^2.18",
@@ -5104,7 +5188,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/laravel-sluggable/issues",
-                "source": "https://github.com/spatie/laravel-sluggable/tree/2.6.2"
+                "source": "https://github.com/spatie/laravel-sluggable/tree/3.1.0"
             },
             "funding": [
                 {
@@ -5112,30 +5196,31 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-03-20T18:07:00+00:00"
+            "time": "2021-06-04T13:53:45+00:00"
         },
         {
             "name": "spatie/laravel-translatable",
-            "version": "4.6.0",
+            "version": "5.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-translatable.git",
-                "reference": "5900d6002a5795712058a04c7ca7c2c44b3e0850"
+                "reference": "c1c201ff3ddff767ab53da2faf78ba141518ae69"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-translatable/zipball/5900d6002a5795712058a04c7ca7c2c44b3e0850",
-                "reference": "5900d6002a5795712058a04c7ca7c2c44b3e0850",
+                "url": "https://api.github.com/repos/spatie/laravel-translatable/zipball/c1c201ff3ddff767ab53da2faf78ba141518ae69",
+                "reference": "c1c201ff3ddff767ab53da2faf78ba141518ae69",
                 "shasum": ""
             },
             "require": {
-                "illuminate/database": "^6.0|^7.0|^8.0",
-                "illuminate/support": "^6.0|^7.0|^8.0",
-                "php": "^7.2|^8.0"
+                "illuminate/database": "^7.0|^8.0",
+                "illuminate/support": "^7.0|^8.0",
+                "php": "^8.0",
+                "spatie/laravel-package-tools": "^1.6"
             },
             "require-dev": {
                 "mockery/mockery": "^1.4",
-                "orchestra/testbench": "^4.0|^5.0|^6.0"
+                "orchestra/testbench": "^5.0|^6.0"
             },
             "type": "library",
             "extra": {
@@ -5186,7 +5271,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/laravel-translatable/issues",
-                "source": "https://github.com/spatie/laravel-translatable/tree/4.6.0"
+                "source": "https://github.com/spatie/laravel-translatable/tree/5.0.1"
             },
             "funding": [
                 {
@@ -5194,7 +5279,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2020-11-19T14:19:29+00:00"
+            "time": "2021-07-15T10:30:08+00:00"
         },
         {
             "name": "spatie/macroable",
