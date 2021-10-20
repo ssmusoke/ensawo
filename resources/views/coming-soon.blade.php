@@ -8,9 +8,8 @@
 
                 <header class="p-4 space-y-1">
                     <h2 class="text-xl font-semibold tracking-tight">
-                        We are just about to launch<br/><br/>
-
-                        Please check back in a short while....
+                        An easy to use digital approach to storing service notification messages, from Mobile Money, Bank Transfers, Service providers like NWSC, UMEME.<br/><br/>
+                        Launching in November 2021<br/><br/>
                     </h2>
                 </header>
         </div>
